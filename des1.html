@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirStays - Destinations</title>
+    <link rel="stylesheet" href="/static/des1.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo.png" alt="AirStays Logo">
+            <span>AirStays</span>
+        </div>
+        <div class="links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="#">Account</a>
+            <a href="#">About</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All Destinations</h1>
+        <div class="destinations">
+            {% for destination in destinations %}
+            <div class="destination-item">
+                <img src="/static/img/{{ destination[0]|lower }}.png" alt="{{ destination[0] }}" class="destination-image">
+                <div class="destination-name">{{ destination[0] }}</div>
+                <div class="destination-price">Rs.{{ destination[1] }}</div>
+                <div class="destination-rating">{{ destination[2] }} ★</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 AirStays. All Rights Reserved.
+    </footer>
+</body>
+</html>

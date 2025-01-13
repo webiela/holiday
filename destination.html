@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Destination</title>
+    <meta name="title" content="Wren - Perosonal Blog Website" />
+    <meta
+      name="description"
+      content="This is a blog html template made by webiela"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="/static/destination.css">
+
+    <!-- 
+    - preload images
+  --></head>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <body>
+    <main>
+      <nav>
+        <img src="/static/img/logo.png" alt="Logo" class="nav__logo-image">
+        <div class="nav__logo">AirStays</div>
+        <ul class="nav__links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="{{ url_for('destinations') }}">Destinations</a></li>
+          <li class="link"><a href="#">Seats</a></li>
+          <li class="link"><a href="#">About</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search..." oninput="showSuggestions(this.value)">
+          <button class="search-button">Search</button>
+          <div class="search-dropdown" id="search-dropdown"></div>
+        </div>  
+        <button class="btn1"><a href="{{ url_for('log') }}">Login</a></button>
+      </nav> 
+
+      <article>
+        <!-- 
+        - #TOPICS
+      -->
+
+        <section class="topics" id="topics" aria-labelledby="topic-label">
+          <div class="container">
+            <div class="card topic-card">
+              <div class="card-content">
+                <h2
+                  class="headline headline-2 section-title card-title"
+                  id="topic-label"
+                >
+                  Top Packages
+                </h2>
+
+                <p class="card-text">
+                  Discover our top holiday packages, offering luxurious stays, exciting tours, and unforgettable experiences. 
+                </p>
+
+                <div class="btn-group">
+                  <button
+                    class="btn-icon"
+                    aria-label="previous"
+                    data-slider-prev
+                  >
+                    <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                  </button>
+
+                  <button class="btn-icon" aria-label="next" data-slider-next>
+                    <ion-icon
+                      name="arrow-forward"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="slider" data-slider>
+                <ul class="slider-list" data-slider-container>
+                  <li class="slider-item">
+                    <a href="#" class="slider-card">
+                      <figure
+                        class="slider-banner img-holder"
+                        style="--width: 507; --height: 618"
+                      >
+                        <img
+                          src="/static/img/andaman and nicobar.png"
+                          width="507"
+                          height="618"
+                          loading="lazy"
+                          alt="Andaman & Nicobar"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <div class="slider-content">
+                        <span class="slider-title">Andaman & Nicobar Holiday Packages</span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="slider-item">
+                    <a href="#" class="slider-card">
+                      <figure
+                        class="slider-banner img-holder"
+                        style="--width: 507; --height: 618"
+                      >
+                        <img
+                          src="/static/img/maldives.png"
+                          width="507"
+                          height="618"
+                          loading="lazy"
+                          alt="Maldives"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <div class="slider-content">
+                        <span class="slider-title">Maldives Holiday Packages</span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="slider-item">
+                    <a href="#" class="slider-card">
+                      <figure
+                        class="slider-banner img-holder"
+                        style="--width: 507; --height: 618"
+                      >
+                        <img
+                          src="/static/img/bali.png"
+                          width="507"
+                          height="618"
+                          loading="lazy"
+                          alt="Bali"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <div class="slider-content">
+                        <span class="slider-title">Bali Holiday Packages</span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="slider-item">
+                    <a href="#" class="slider-card">
+                      <figure
+                        class="slider-banner img-holder"
+                        style="--width: 507; --height: 618"
+                      >
+                        <img
+                          src="/static/img/singapore.png"
+                          width="507"
+                          height="618"
+                          loading="lazy"
+                          alt="Singapore"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <div class="slider-content">
+                        <span class="slider-title">Singapore Holiday Packages</span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="slider-item">
+                    <a href="#" class="slider-card">
+                      <figure
+                        class="slider-banner img-holder"
+                        style="--width: 507; --height: 618"
+                      >
+                        <img
+                          src="/static/img/thailand.png"
+                          width="507"
+                          height="618"
+                          loading="lazy"
+                          alt="Thailand"
+                          class="img-cover"
+                        />
+                      </figure>
+
+                      <div class="slider-content">
+                        <span class="slider-title">Thailand Holiday Packages</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #FEATURED POST
+      -->
+
+        <section class="section feature" aria-label="feature" id="featured">
+          <div class="container">
+            <h2 class="headline headline-2 section-title">
+              <span class="spa">Travellers's picked</span>
+            </h2>
+
+            <p class="section-text">Featured and highly rated articles</p>
+
+            <ul class="feature-list">
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <img
+                      src="/static/img/featured-1.png"
+                      width="1602"
+                      height="903"
+                      loading="lazy"
+                      alt="Self-observation is the first step of inner unfolding"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Travel</a>
+
+                        <a href="#" class="span hover-2">#Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Self-observation is the first step of inner unfolding
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <img
+                      src="/static/img/featured-2.png"
+                      width="1602"
+                      height="903"
+                      loading="lazy"
+                      alt="Self-observation is the first step of inner unfolding"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Design</a>
+
+                        <a href="#" class="span hover-2">#Movie</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Self-observation is the first step of inner unfolding
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <img
+                      src="/static/img/featured-3.png"
+                      width="1602"
+                      height="903"
+                      loading="lazy"
+                      alt="Self-observation is the first step of inner unfolding"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Design</a>
+
+                        <a href="#" class="span hover-2">#Movie</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Self-observation is the first step of inner unfolding
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <img
+                      src="/static/img/featured-4.png"
+                      width="1602"
+                      height="903"
+                      loading="lazy"
+                      alt="Self-observation is the first step of inner unfolding"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Design</a>
+
+                        <a href="#" class="span hover-2">#Movie</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Self-observation is the first step of inner unfolding
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card feature-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 1602; --height: 903"
+                  >
+                    <img
+                      src="/static/img/featured-5.png"
+                      width="1602"
+                      height="903"
+                      loading="lazy"
+                      alt="Self-observation is the first step of inner unfolding"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2">#Design</a>
+
+                        <a href="#" class="span hover-2">#Movie</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon
+                          name="time-outline"
+                          aria-hidden="true"
+                        ></ion-icon>
+
+                        <span class="span">6 mins read</span>
+                      </div>
+                    </div>
+
+                    <h3 class="headline headline-3">
+                      <a href="#" class="card-title hover-2">
+                        Self-observation is the first step of inner unfolding
+                      </a>
+                    </h3>
+
+                    <div class="card-wrapper">
+                      <a href="#" class="card-btn">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #POPULAR TAGS
+      -->
+
+        <section class="tags" aria-labelledby="tag-label">
+          <div class="container">
+            <h2 class="headline headline-2 section-title" id="tag-label">
+              <span class="spa">Popular Destinations</span>
+            </h2>
+
+            <p class="section-text">Most searched destinations</p>
+
+            <ul class="grid-list">
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag1.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Travel"
+                  />
+
+                  <p class="btn-text">Japan</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag2.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Culture"
+                  />
+
+                  <p class="btn-text">Tanzania</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag3.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Lifestyle"
+                  />
+
+                  <p class="btn-text">Greece</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag4.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Fashion"
+                  />
+
+                  <p class="btn-text">Peru</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag5.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Food"
+                  />
+
+                  <p class="btn-text">Canada</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag6.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Space"
+                  />
+
+                  <p class="btn-text">Croatia</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag7.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Animal"
+                  />
+
+                  <p class="btn-text">Italy</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag8.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Minimal"
+                  />
+
+                  <p class="btn-text">Africa</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag9.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Interior"
+                  />
+
+                  <p class="btn-text">France</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag10.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Plant"
+                  />
+
+                  <p class="btn-text">Iceland</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag11.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Nature"
+                  />
+
+                  <p class="btn-text">Jordan</p>
+                </button>
+              </li>
+
+              <li>
+                <button class="card tag-btn">
+                  <img
+                    src="/static/img/tag12.png"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Business"
+                  />
+
+                  <p class="btn-text">Australia</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>AirStays</h3>
+          <p>
+            Where Excellence Takes Flight. With a strong commitment to customer
+            satisfaction and a passion for air travel, Flivan Airlines offers
+            exceptional service and seamless journeys.
+          </p>
+          <p>
+            From friendly smiles to state-of-the-art aircraft, we connect the
+            world, ensuring safe, comfortable, and unforgettable experiences.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <p>Home</p>
+          <p>About</p>
+          <p>Offers</p>
+          <p>Seats</p>
+          <p>Destinations</p>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+          <p>Support</p>
+          <p>Media</p>
+          <p>Socials</p>
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>Copyright © 2024 AirStays. All rights reserved.</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+       -->
+
+    <script src="/static/destination.js"></script>
+
+    <!-- 
+    - ionicon link
+        -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
