@@ -65,29 +65,3 @@ window.addEventListener("resize", function () {
 
   moveSliderItem();
 });
-
-function showSuggestions(value) {
-  const dropdown = document.getElementById('search-dropdown');
-  if (value.length === 0) {
-    dropdown.style.display = 'none';
-    return;
-  }
-
-  // Example suggestions, replace with actual data
-  const suggestions = ['Destination 1', 'Destination 2', 'Destination 3', 'Destination 4'];
-  const filteredSuggestions = suggestions.filter(suggestion => suggestion.toLowerCase().includes(value.toLowerCase()));
-
-  dropdown.innerHTML = '';
-  filteredSuggestions.forEach(suggestion => {
-    const item = document.createElement('div');
-    item.className = 'dropdown-item';
-    item.textContent = suggestion;
-    item.onclick = () => {
-      document.querySelector('.search-bar').value = suggestion;
-      dropdown.style.display = 'none';
-    };
-    dropdown.appendChild(item);
-  });
-
-  dropdown.style.display = 'block';
-}

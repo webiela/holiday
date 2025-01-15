@@ -176,7 +176,7 @@
   ::-webkit-scrollbar-track { background-color: transparent; }
   
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(3, 38, 54);
+    background-color: blue;
     border-radius: 10%;
   }
   
@@ -232,7 +232,7 @@
     background-image: var(--gradient-1);
     display: inline-block;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -webkit-background-clip: text;
   }
   
   
@@ -308,17 +308,12 @@
     justify-content: space-between;
     gap: 1rem;
   }
-  .nav__logo-image {
-    max-width: 100px; 
-    margin-right: 0px; 
-    vertical-align: middle; 
-  }
   
 .nav__logo {
     font-size: 3rem;
     position: relative;
     padding: 30px 20px;
-    right: 210px;
+    right: -65px;
     font-weight: 600;
     color: var(--text-dark);
   }
@@ -328,7 +323,6 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-left: -200px;
   }
   
  .link a {
@@ -340,76 +334,20 @@
   .link a:hover {
     color: var(--text-dark);
   }
-
-  .search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
   
-  .search-bar {
-    flex-grow: 1;
-    max-width: 300px;
-    margin-right: 10px;
-    padding: 0.5rem 1rem;
-    border: 1px solid rgb(8, 44 ,61);
-    border-radius: 20px;
-    outline: none;
-  }
-  
-  .search-button {
-    padding: 0.5rem 1rem;
-    border: 1px solid rgb(8, 44, 61);
-    border-radius: 20px;
-    background-color: rgb(8, 44, 61);
-    color: white;
-    cursor: pointer;
-  }
-  
-  .search-button:hover {
-    background-color: #153f6d;
-  }
-
-  .search-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-    display: none;
-  }
-  
-  .search-dropdown .dropdown-item {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .search-dropdown .dropdown-item:hover {
-    background-color: #f1f1f1;
-  }
-    
   .btn1 {
     padding: 0.75rem 2rem;
     outline: none;
     border: none;
     position: relative;
     right: 50px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
     color: white;
-    background-color: rgb(8, 44, 61);
+    background-color: blue;
     border-radius: 2rem;
     cursor: pointer;
     transition: 0.3s;
-  }
-
-  .btn1:hover {
-    background-color: #153f6d;
   }
   
   
